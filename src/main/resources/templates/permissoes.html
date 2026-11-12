@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Permissões | Central de Incidentes</title>
+  <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<header th:replace="~{fragments :: header}"></header>
+<main class="container">
+  <div class="page-heading">
+    <div><div class="breadcrumb">Central <span>/</span> Permissões</div><h1>Permissões dos perfis</h1><p class="muted">Consulte o que cada perfil pode fazer na aplicação.</p></div>
+  </div>
+  <section class="panel" aria-labelledby="titulo-permissoes">
+    <div class="panel-heading"><div><h2 id="titulo-permissoes">Acessos na aplicação</h2><p>Esta página é apenas para consulta.</p></div></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Ação</th><th scope="col">Administrador</th><th scope="col">Analista</th><th scope="col">Visualizador</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Consultar incidentes, detalhes e histórico</th><td>Permitido</td><td>Permitido</td><td>Permitido</td></tr>
+        <tr><th scope="row">Consultar informações e resumos</th><td>Permitido</td><td>Permitido</td><td>Permitido</td></tr>
+        <tr><th scope="row">Abrir incidente</th><td>Permitido</td><td>Permitido</td><td>Não permitido</td></tr>
+        <tr><th scope="row">Iniciar análise</th><td>Permitido</td><td>Permitido</td><td>Não permitido</td></tr>
+        <tr><th scope="row">Registrar ação de resposta</th><td>Permitido</td><td>Permitido</td><td>Não permitido</td></tr>
+        <tr><th scope="row">Encerrar incidente</th><td>Permitido</td><td>Permitido</td><td>Não permitido</td></tr>
+        <tr><th scope="row">Consultar esta página de permissões</th><td>Permitido</td><td>Não permitido</td><td>Não permitido</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <p class="muted">Estes são os perfis da aplicação. As roles do MySQL controlam as permissões das contas de acesso ao banco.</p>
+</main>
+</body>
+</html>
